@@ -15,4 +15,7 @@ https://github.com/robbyrussell/oh-my-zsh
 
 3. Install `.zshrc`:
 
-`ln -s .my-zsh/zshrc ~/.zshrc`
+```
+rm ~/.zshrc
+ln -s .my-zsh/zshrc ~/.zshrc
+```
