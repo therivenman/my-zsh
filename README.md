@@ -6,6 +6,7 @@ My Zsh configuration files (requires oh-my-zsh)
 Installation:
 
 1. Clone repo:
+  
   ```
   git clone https://github.com/therivenman/my-zsh.git ~/.my-zsh
   ```
