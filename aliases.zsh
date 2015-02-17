@@ -3,8 +3,6 @@ alias ll='ls -al'
 alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
-alias vi='vim -O'
-alias vim='vim -O'
 alias apt-get='sudo apt-get'
 
 alias grep='grep --color --exclude=\*.svn'
