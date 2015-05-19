@@ -48,6 +48,9 @@ export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
+# Prevent the extremedb libraries from polluting HOME
+export EXTREMEDB_DIR=/tmp
+
 # Locale settings (utf-8)
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
