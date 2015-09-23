@@ -13,3 +13,8 @@ down ()
 		cd $downdirs
 	fi
 }
+
+= ()
+{
+    echo "$(($@))"
+}
