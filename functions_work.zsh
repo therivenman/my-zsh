@@ -1,17 +1,3 @@
-real_git="/usr/bin/git"
-git()
-{
-    if [[ ($1 == svn) && ($2 == dcommit) ]]
-    then
-        if $real_git shortlog | grep -i dcommit > /dev/null
-        then
-            echo "******* CANCELLED ******* - Branch contains commits that can't be sent to the server."
-            return 2
-        fi
-    fi
-    $real_git "$@"
-}
-
 set_workspace ()
 {
 	if [ $# -ne 1 ]; then
