@@ -54,3 +54,6 @@ export EXTREMEDB_DIR=/tmp
 # Locale settings (utf-8)
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Go away software flow control!
+stty -ixon
