@@ -11,3 +11,5 @@ alias crgrep='grep -rni	--include={*.c,*.cpp,*.h,*.icc,*.mk,{M,m}akefile{*},*.py
 alias quickack='ack-grep --thpppt;ack-grep -icl'
 
 alias back='popd -q'
+
+alias vimt='TABLET=1 vim'
