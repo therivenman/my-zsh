@@ -1,3 +1,17 @@
+real_git="/usr/bin/git"
+git()
+{
+    if [[ $1 == push ]]
+    then
+        if $real_git shortlog | grep PUSH > /dev/null
+        then
+            echo "******* CANCELLED ******* - Branch contains commits that can't be sent to the server."
+            return 2
+        fi
+    fi
+    $real_git "$@"
+}
+
 set_workspace ()
 {
 	if [ $# -ne 1 ]; then
@@ -44,29 +58,3 @@ workspace_scan ()
 	cd $CLIFFORD_DIR
 }
 
-sync_dbus ()
-{
-	local current_dbus_sock=$(echo $DBUS_SESSION_BUS_ADDRESS)
-	local tmux_dbus_sock=$(tmux showenv| grep DBUS_SESSION_BUS_ADDRESS|sed 's/DBUS_SESSION_BUS_ADDRESS=//')
-
-	if [[ $current_dbus_sock != $tmux_dbus_sock ]]
-	then
-		DBUS_SESSION_BUS_ADDRESS=$tmux_dbus_sock
-	fi
-}
-
-sync_qt ()
-{
-	local current_qt_session=$(echo $SESSION_MANAGER)
-	local qt_session=$(tmux showenv| grep SESSION_MANAGER|sed 's/SESSION_MANAGER=//')
-
-	if [[ $current_qt_session != $qt_session ]]
-	then
-		SESSION_MANAGER=$qt_session
-	fi
-}
-
-function chpwd {
-	sync_dbus
-	sync_qt
-}

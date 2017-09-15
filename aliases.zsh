@@ -4,6 +4,7 @@ alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
 alias apt-get='sudo apt-get'
+alias apt='sudo apt'
 
 alias grep='grep --color --exclude=\*.svn'
 alias ngrep='grep -n --color --exclude=\*.svn'

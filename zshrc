@@ -38,22 +38,15 @@ ZSH_CUSTOM=~/.my-zsh/
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn gnu-tools history-substring-search ssh-agent)
+plugins=(git svn gnu-tools ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/bin"
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
-
-# Prevent the extremedb libraries from polluting HOME
-export EXTREMEDB_DIR=/tmp
-
-# Locale settings (utf-8)
-export LC_CTYPE=en_US.UTF-8
-export LANG=en_US.UTF-8
 
 # Go away software flow control!
 stty -ixon
