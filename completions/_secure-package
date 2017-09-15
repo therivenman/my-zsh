@@ -1,0 +1,3 @@
+#compdef secure-package
+
+_arguments "1:Path:_files" "2:USB Drive:{_files -W /media/mwettlaufer}" "3:Action:(secure finalize)"
