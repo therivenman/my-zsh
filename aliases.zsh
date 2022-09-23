@@ -4,6 +4,7 @@ alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
 alias apt-get='sudo apt-get'
+alias apt='sudo apt'
 
 alias grep='grep --color --exclude=\*.svn'
 alias ngrep='grep -n --color --exclude=\*.svn'
@@ -12,4 +13,7 @@ alias quickack='ack-grep --thpppt;ack-grep -icl'
 
 alias back='popd -q'
 
-alias vimt='TABLET=1 vim'
+alias ssh='TERM=xterm-256color ssh'
+
+alias ctrlc='xclip -selection c'
+alias ctrlv='xclip -selection c -o'
